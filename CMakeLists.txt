@@ -108,7 +108,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES get_parameters
-  CATKIN_DEPENDS rospy std_msgs
+  CATKIN_DEPENDS rospy roscpp std_msgs message_runtime
 #  DEPENDS system_lib
 )
 
@@ -134,7 +134,7 @@ include_directories(
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_executable(getParameters src/example_getting_parameters.cpp)
 target_link_libraries(getParameters ${catkin_LIBRARIES})
-add_dependencies(getParameters riss_2018_generate_messages_cpp)
+add_dependencies(getParameters get_parameters_generate_messages_cpp)
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
@@ -165,21 +165,21 @@ add_dependencies(getParameters riss_2018_generate_messages_cpp)
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-install(PROGRAMS
-  src/example_client.py
-  src/example_service.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-message("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${CATKIN_PACKAGE_BIN_DESTINATION}")
+#install(PROGRAMS
+#  src/example_client.py
+#  src/example_service.py
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
+#message("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${CATKIN_PACKAGE_BIN_DESTINATION}")
 
 ## Mark executables and/or libraries for installation
-install(TARGETS getParameters  
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+#install(TARGETS getParameters  
+#  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 
-message("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${CATKIN_PACKAGE_LIB_DESTINATION}")
+#message("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${CATKIN_PACKAGE_LIB_DESTINATION}")
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
 #   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
