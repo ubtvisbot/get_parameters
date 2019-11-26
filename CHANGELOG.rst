@@ -2,8 +2,8 @@
 Changelog for package get_parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.3 (2019-11-26)
+------------------
 * docs: modify email
 * 0.0.2
 * docs: modify CHANGLOG
