@@ -4,6 +4,10 @@ Changelog for package get_parameters
 
 Forthcoming
 -----------
+* docs: modify email
+* 0.0.2
+* docs: modify CHANGLOG
+* Contributors: lifu.qin
 
 0.0.2 (2019-11-26)
 ------------------
